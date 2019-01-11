@@ -1,0 +1,1 @@
+# auto-static-react-app
