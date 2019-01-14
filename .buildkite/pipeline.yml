@@ -1,0 +1,21 @@
+steps:
+  - command: |
+    - "yarn install && yarn test --coverage"
+    label: ":nodejs: Dependencies"
+    agents:
+      queue: "automation-standard-builder-fleet"
+
+  - wait
+
+  - command: |
+    - "yarn install && NODE_DEBUG=gh-pages yarn deploy"
+    label: ":github: Deploy to GitHub Pages"
+    branches: "master"
+    agents:
+      queue: "automation-standard-builder-fleet"
+
+  - wait 
+
+  - command: |
+      echo "Success!!"
+    label: "All checks succeeded :palm_tree: :buck:"
