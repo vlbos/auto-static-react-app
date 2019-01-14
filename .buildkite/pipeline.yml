@@ -1,14 +1,12 @@
 steps:
-  - command: |
-    - "yarn install && yarn test --coverage"
+  - command: yarn install && yarn test --coverage
     label: ":nodejs: Dependencies"
     agents:
       queue: "automation-standard-builder-fleet"
 
   - wait
 
-  - command: |
-    - "yarn install && NODE_DEBUG=gh-pages yarn deploy"
+  - command: yarn install && NODE_DEBUG=gh-pages yarn deploy
     label: ":github: Deploy to GitHub Pages"
     branches: "master"
     agents:
