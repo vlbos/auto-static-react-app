@@ -8,7 +8,7 @@ steps:
   - wait
 
   - command: |
-      echo git config --list
+      git config --list
     label: "Temporary git output..."
     agents:
       queue: "automation-standard-builder-fleet"
