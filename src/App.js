@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import tree from './assets/images/tree.svg';
 import stag from './assets/images/stag.svg';
 import './App.css';
 
@@ -10,7 +9,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={tree} className="App-logo" alt="tropical" />
           <img src={stag} className="App-logo" alt="stag" />
         </header>
 
