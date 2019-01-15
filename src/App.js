@@ -10,13 +10,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <span>tropical</span>
           <img src={tree} className="App-logo" alt="tropical" />
           <img src={stag} className="App-logo" alt="stag" />
-          <span>stag</span>
         </header>
 
-        <ContentPage content={"..."}/>
+        <ContentPage content={"auto-static-react-app"}/>
 
       </div>
     );
