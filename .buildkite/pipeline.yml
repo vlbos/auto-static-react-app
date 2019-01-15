@@ -8,6 +8,14 @@ steps:
   - wait
 
   - command: |
+      echo git config --list
+    label: "Temporary git output..."
+    agents:
+      queue: "automation-standard-builder-fleet"
+
+  - wait
+
+  - command: |
       yarn install && NODE_DEBUG=gh-pages yarn deploy
     label: ":github: Deploy to GitHub Pages"
     branches: "master"
