@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={stag} className="App-logo" alt="stag" />
-          <span className="Oh-ai"> - "ohai"</span>
+          <span className="Oh-ai"> - "Automation demo"</span>
         </header>
 
         <ContentPage content={"auto-static-react-app"}/>
